@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #53A69E, #75C970);
+}
+
+.container {
+    width: 90%;
+    padding: 3%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1180px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+}
+
+.nav, .bio, .content {
+    
+    
+    background-color: #FFFFFF;
+    width: 75px;
+}
+.nav {
+    border-radius: 10px;
+    height: 400px;
+    margin-right: 15px;
+}
+.bio {
+    width: 45%;
+    min-height: 700px;
+    border-radius: 2%;
+}
+.bio_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bio_image {
+    height: 400px;
+    width: 100%;
+    background:#E2E8F0;
+    
+    border-radius: 2% 2% 0 0;
+}
+
+.bio_name {
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+.bio_name h1 {
+    font-size: 24px;
+}
+
+.bio_profession {
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    color: #78CC6D;
+}
+
+.bio_social {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bio_social_icon {
+    
+    height: 80%;
+    width: 20%;
+    background: url('icons/linkedin_inactive.png') no-repeat center center;
+    background-size: contain;
+}
+.bio_social_icon:hover {
+    background: url('icons/linkedin_active.png') no-repeat center center;
+    background-size: contain;
+}
+
+.bio_links {
+    height: 150px;
+    width: 100%;
+    background-color: silver;
+    border-radius: 0 0 2% 2%;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    height: 680px;
+    width: 55%;
+    border-radius: 0 2% 2% 0;
+}
+
