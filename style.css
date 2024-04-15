@@ -1,108 +1,103 @@
-body {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+body {
     background: linear-gradient(90deg, #53A69E, #75C970);
 }
-
 .container {
-    width: 90%;
-    padding: 3%;
+    max-width: 960px;
+    min-height: 100%;
+    margin-inline: auto;
+    height: 100dvh;
+    position:relative;
 }
-
 .wrapper {
+    width: 100%;
+    min-height: 100px;
+
+    padding: 10px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 1180px;
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    align-items: center;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    grid-template-rows: 80px repeat(4 1fr);
+    grid-gap: 10px;
+    
+}
+#nav, #bio, #skills, #info {
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    min-height: 150px;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 }
 
-.nav, .bio, .content {
-    
-    
-    background-color: #FFFFFF;
-    width: 75px;
-}
-.nav {
-    border-radius: 10px;
-    height: 400px;
-    margin-right: 15px;
-}
-.bio {
-    width: 45%;
-    min-height: 700px;
-    border-radius: 2%;
-}
-.bio_wrapper {
+#nav {
+    grid-area: 1 / 1 / 5 / 2;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
+#bio {
+    grid-area: 1 / 2 / 4 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+}
 .bio_image {
-    height: 400px;
-    width: 100%;
-    background:#E2E8F0;
-    
-    border-radius: 2% 2% 0 0;
+    grid-area: 1 / 1 / 4 / 2;  
 }
-
+.bio_image img {
+    display: block;
+    height: 200px;
+    max-width: 100%;
+}
 .bio_name {
-    height: 45px;
-    width: 100%;
-    background-color: white;
-    text-align: center;
+    grid-area: 1 / 2 / 2 / 3;
 }
-.bio_name h1 {
-    font-size: 24px;
-}
-
 .bio_profession {
-    height: 45px;
-    width: 100%;
-    background-color: white;
-    padding: 5px;
-    text-align: center;
-    color: #78CC6D;
+    grid-area: 2 / 2 / 3 / 3;
 }
-
 .bio_social {
-    height: 50px;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    grid-area: 3 / 2 / 4 / 3;
 }
-
-.bio_social_icon {
-    
-    height: 80%;
-    width: 20%;
-    background: url('icons/linkedin_inactive.png') no-repeat center center;
-    background-size: contain;
-}
-.bio_social_icon:hover {
-    background: url('icons/linkedin_active.png') no-repeat center center;
-    background-size: contain;
-}
-
 .bio_links {
-    height: 150px;
-    width: 100%;
-    background-color: silver;
-    border-radius: 0 0 2% 2%;
+    grid-area: 4 / 1 / 5 / 3;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+#skills {
+    grid-area: 1 / 5 / 4 / 7; 
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
 }
-.content {
-    height: 680px;
-    width: 55%;
-    border-radius: 0 2% 2% 0;
+.skills_item_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
 }
+.skills_item_grid_item img {
+    display: block;
+    max-width: 100%;
+}
+
+#info {
+    grid-area: 4 / 2 / 6 / 7;
+}
+
+ion-icon {
+    font-size: 60px;
+}
+
+
+
 

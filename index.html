@@ -5,47 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Контейнер -->
 
     <div class="container">
+
+        <!-- Обертка -->
+
         <div class="wrapper">
 
-            <div class="nav">
+            <!-- Навигация -->
 
-
-
+            <div id="nav">
+                <div><ion-icon name="logo-linkedin"></ion-icon></ion-icon></div>
+                <div>About me</div>
+                <div>Projects</div>
+                <div>Contact me</div>
             </div>
 
-            <div class="bio">
-                <div class="bio_wrapper">
+            <!-- Анкета -->
 
-                    <div class="bio_image"></div>
-                    <div class="bio_name"><h1>Приходько Александр</h1></div>
-                    <div class="bio_profession">BackEnd Developer</div>
-                    <div class="bio_social">
-                        <div class="bio_social_icon"></div>
-                    </div>
-                    <div class="bio_links">
-                        <div class="bio_links_button"></div>
-                        <div class="bio_links_button"></div>
-                    </div>
+            <div id="bio">
+                <div class="bio_image">
+                    <img src="images/cotton.jpg" alt="">
+                </div>
+                <div class="bio_name">Приходько Александр</div>
+                <div class="bio_profession">BackEnd Developer</div>
+                <div class="bio_social">иконочки</div>
+                <div class="bio_links">
+                    <a href="#">link1</a>
+                    <a href="#">link2</a>
+                </div>
+            </div>
 
+            <!-- Навыки -->
+
+            <div id="skills">
+                <div class="skills_title">Навыки</div>
+                <div class="skills_item_grid">
+                    <div class="skills_item_grid_item"><img src="images/python.png" alt=""></div>
+                    <div class="skills_item_grid_item"><img src="images/django.png
+                        " alt=""></div>
+                    <div class="skills_item_grid_item"><img src="images/beautifulsoup.png
+                            " alt=""></div>
                 </div>
 
-                
-
             </div>
 
-            <div class="content">
+            <!-- Конетент -->
 
-
-
-            </div>
-
+            <div id="info"></div>
         </div>
     </div>
-
+    <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
 </body>
 
 </html>
