@@ -7,16 +7,15 @@
 .container {
     height: 100dvh;
     width: 100%;
-    position: relative;
-    background-color:gray;
 }
 
 .nav {
-    position: sticky;
-    top: 100%;
-    padding: 8px 0;
+    position: fixed;
+    bottom: 0dvh;
+    padding: 16px 0;
     background-color: white;
     color: black;
+    width: 100%;
 }
 
 .nav ul {
@@ -24,19 +23,21 @@
     display: flex;
     overflow: auto;
     width: 100%;
+    
 }
 
 .nav ul li {
     min-width: 20%;
     display: block;
     width: 100%;
+    border-right: 1px dotted #333333;
 }
 
 .nav a {
     text-decoration: none;
     color: black;
     display: block;
-    font-size: 12px;
+    font-size: 17px;
     text-transform: uppercase;
     height: auto;
     font-weight: 500;
@@ -45,16 +46,116 @@
     display: block;
     width: 40px;
     height: 30px;
-    font-size: 20px;
+    font-size: 28px;
     line-height: 30px;
     text-align: center;
     margin:0 auto;
+    margin-bottom: 5px;
 }
 .lnk {
     line-height: 13px;
     display: block;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
+}
+
+.intro {
+    padding: 100px 35px;
+    background-color: #FDFDFD;
+    min-height: 100dvh;
+}
+
+.intro h1 ,h2, h4 {
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.intro h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.intro h1{
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 700;
+    font-family: "EB Garamond", serif;
+}
+
+.intro h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.intro a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 32px;
+    padding: 15px 45px;
+    border: 3px solid #673AB7;
+    text-align: center;
+    border-radius: 2em;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.btn-fil {
+    color: white;
+    background-color: #673AB7;
+}
+
+.btn-fil:hover {
+    background-color: white;
+    color:#673AB7;
+}
+.btn-empty {
+    background-color: white;
+    color:#673AB7;
+}
+.btn-empty:hover {
+    background-color: #673AB7;
+    color: white;
+}
+
+#about {
+    padding: 15px 15px 100px 15px;
+}
+
+#about h2 {
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "EB Garamond", serif;
+    margin-bottom: 60px;
+}
+
+#about h2::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    border-top-style: solid;
+    border-color: inherit;
+    width: 5rem;
+    border-top-width: 1px;
+    box-sizing: inherit;
+    bottom:-30px;
+    left: 0;
+
+
+}
+
+#about p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-sizing: inherit;
+    font-weight: 400;
+    color: #6f6f6f;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    font-family: "Open Sans", sans-serif;
 }
