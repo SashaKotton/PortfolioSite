@@ -12,25 +12,31 @@
 .nav {
     position: fixed;
     bottom: 0dvh;
-    padding: 16px 0;
+    padding: 12px 0;
     background-color: white;
     color: black;
     width: 100%;
+    margin: 0 auto;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
-    
+    margin: 0;
 }
 
+
 .nav ul li {
-    min-width: 20%;
+    min-width: 19%;
     display: block;
     width: 100%;
     border-right: 1px dotted #333333;
+}
+
+.nav ul li:last-child {
+    border-right: none;
 }
 
 .nav a {
@@ -44,7 +50,7 @@
 }
 .icon {
     display: block;
-    width: 40px;
+    min-width: 40px;
     height: 30px;
     font-size: 28px;
     line-height: 30px;
@@ -65,6 +71,7 @@
     padding: 100px 35px;
     background-color: #FDFDFD;
     min-height: 100dvh;
+    background: transparent;
 }
 
 .intro h1 ,h2, h4 {
@@ -121,41 +128,90 @@
     color: white;
 }
 
-#about {
+#about, #skills {
     padding: 15px 15px 100px 15px;
 }
 
-#about h2 {
+#about h2, skills h2 {
     font-size: 32px;
     font-weight: 600;
     position: relative;
     text-transform: uppercase;
     font-family: "EB Garamond", serif;
-    margin-bottom: 60px;
 }
-
-#about h2::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    border-top-style: solid;
-    border-color: inherit;
-    width: 5rem;
-    border-top-width: 1px;
-    box-sizing: inherit;
-    bottom:-30px;
-    left: 0;
-
-
+.about-hr {
+    width: 70px;
+    height: 5px;
+    background-color: #673AB7;
 }
 
 #about p {
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     box-sizing: inherit;
     font-weight: 400;
     color: #6f6f6f;
     font-size: 1rem;
     line-height: 1.875rem;
     font-family: "Open Sans", sans-serif;
+}
+
+#about ul {
+    list-style-type: none;
+}
+#about ul li {
+    display: block;
+    width: auto;
+    word-break: break-word;
+    text-align: right;
+    font-size: 15px;
+    line-height: 45px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#about ul li strong {
+    float: left;
+    font-size: 14px;
+    line-height: 45px;
+    font-weight: 400;
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+.about-btn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #673AB7;
+    text-decoration: none;
+    color: #000000;
+}
+.about-btn:hover {
+    color: white;
+    background-color: #673AB7;
+}
+
+#skills h2 {
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "EB Garamond", serif;
+}
+@media (max-width: 425px) {
+    .intro h1{
+        font-size: 38px;
+    }
+    .intro h2 {
+        font-size: 26px;
+    }
+    .intro h4 {
+        font-size: 18px;
+    }
+    #about h2 {
+        font-size: 26px;
+    }
+    .lnk {
+        font-size: 11px;
+    }
 }
