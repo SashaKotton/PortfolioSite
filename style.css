@@ -48,6 +48,10 @@
     height: auto;
     font-weight: 500;
 }
+.nav a:hover {
+    color: white;
+    background-color: #673AB7;
+}
 .icon {
     display: block;
     min-width: 40px;
@@ -74,7 +78,7 @@
     background: transparent;
 }
 
-.intro h1 ,h2, h4 {
+.intro h1 , h2, h4 {
     margin-bottom: 30px;
     font-family: "Open Sans", sans-serif;
 }
@@ -128,24 +132,24 @@
     color: white;
 }
 
-#about, #skills {
-    padding: 15px 15px 100px 15px;
+#about, #skills, #skills-details{
+    padding: 15px 15px 75px 15px;
 }
 
-#about h2, skills h2 {
+#about h2, skills h2, #skill-details h2 {
     font-size: 32px;
     font-weight: 600;
     position: relative;
     text-transform: uppercase;
     font-family: "EB Garamond", serif;
 }
-.about-hr {
+.hr {
     width: 70px;
     height: 5px;
     background-color: #673AB7;
 }
 
-#about p {
+#about p, #skills p, #skills-details p{
     margin-bottom: 1rem;
     margin-top: 2rem;
     box-sizing: inherit;
@@ -190,14 +194,85 @@
     color: white;
     background-color: #673AB7;
 }
-
-#skills h2 {
-    font-size: 32px;
-    font-weight: 600;
-    position: relative;
-    text-transform: uppercase;
-    font-family: "EB Garamond", serif;
+#skills {
+    background-color: #f3f1f8;
 }
+#skills h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    margin: 50px 0 10px;
+}
+.progress-card {
+    margin-top: 40px;
+}
+.progress-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+.progress-text h4 {
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 30px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0 !important;
+}
+.progress-text p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545454;
+    line-height: 22px;
+    margin-top: 0 !important;
+}
+
+
+[role="progressbar"] {
+    display: none;
+    --size: 165px;
+    --bar-width: 20px;
+    
+    font-size: 2.5rem;
+    width: var(--size);
+    aspect-ratio: 1 / 1;
+    color: black;
+
+    background: conic-gradient(#673AB7 56%, rgb(238, 236, 236) 0%);
+    border-radius: 50%;
+    margin: 1rem auto;
+    display: grid;
+    place-items: center;
+
+
+    &::after {
+        content: attr(aria-valuenow) "%";
+        background-color: white;
+        border-radius: inherit;
+        width: calc(100% - var(--bar-width));
+        aspect-ratio: 1 / 1;
+        display: grid;
+        place-items: center;
+    }
+}
+.progressbar:not([role="progressbar"]) {
+    color: red;
+}
+
+#skills-details {
+    color: white;
+    background-color: #673AB7;
+}
+
+#skills-details .hr {
+    background-color: white;
+}
+
+#skills-details p {
+    color: white;
+}
+
 @media (max-width: 425px) {
     .intro h1{
         font-size: 38px;
