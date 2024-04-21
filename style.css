@@ -132,11 +132,11 @@
     color: white;
 }
 
-#about, #skills, #skills-details{
+#about, #skills, #language{
     padding: 15px 15px 75px 15px;
 }
 
-#about h2, skills h2, #skill-details h2 {
+#about h2, #skills h2, #language h2 {
     font-size: 32px;
     font-weight: 600;
     position: relative;
@@ -149,7 +149,7 @@
     background-color: #673AB7;
 }
 
-#about p, #skills p, #skills-details p{
+#about p, #skills p, #language p{
     margin-bottom: 1rem;
     margin-top: 2rem;
     box-sizing: inherit;
@@ -194,9 +194,7 @@
     color: white;
     background-color: #673AB7;
 }
-#skills {
-    background-color: #f3f1f8;
-}
+
 #skills h3 {
     font-size: 16px;
     text-transform: uppercase;
@@ -260,17 +258,35 @@
     color: red;
 }
 
-#skills-details {
+#language {
     color: white;
     background-color: #673AB7;
 }
 
-#skills-details .hr {
+#language .hr {
     background-color: white;
 }
 
-#skills-details p {
+#language p {
     color: white;
+}
+
+.language-progressbar-english {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, white 70%, gray 0%);
+}
+
+.language-progressbar-russian {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, white 100%, gray 0%);
+}
+
+.language-progressbar-kazakh {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, white 55%, gray 0%);
 }
 
 @media (max-width: 425px) {
