@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-sizing: inherit;
+    font-weight: 400;
+    color: #6f6f6f;
+    
+}
 
 .container {
     height: 100dvh;
@@ -17,6 +25,7 @@
     color: black;
     width: 100%;
     margin: 0 auto;
+    
 }
 
 .nav ul {
@@ -49,8 +58,11 @@
     font-weight: 500;
 }
 .nav a:hover {
-    color: white;
-    background-color: #673AB7;
+    .icon {
+        color: #673AB7
+    }
+    /* color: white;
+    background-color: #673AB7; */
 }
 .icon {
     display: block;
@@ -132,16 +144,18 @@
     color: white;
 }
 
-#about, #skills, #language{
-    padding: 15px 15px 75px 15px;
+#about, #skills, #language, #experience, #education, #contacts, #mailme{
+    padding: 25px 15px 75px 15px;
 }
 
-#about h2, #skills h2, #language h2 {
-    font-size: 32px;
-    font-weight: 600;
+#about h2, #skills h2, #language h2, #experience h2, #education h2, #contacts h2, #mailme h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
     position: relative;
     text-transform: uppercase;
-    font-family: "EB Garamond", serif;
+    font-family: "Oswald", sans-serif;
+
 }
 .hr {
     width: 70px;
@@ -149,7 +163,7 @@
     background-color: #673AB7;
 }
 
-#about p, #skills p, #language p{
+#about p, #skills p, #language p, #experience p, #education p, #contacts p, #mailme p{
     margin-bottom: 1rem;
     margin-top: 2rem;
     box-sizing: inherit;
@@ -157,7 +171,7 @@
     color: #6f6f6f;
     font-size: 1rem;
     line-height: 1.875rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 #about ul {
@@ -186,21 +200,21 @@
     display: block;
     padding: 10px;
     text-align: center;
-    border: 1px solid #673AB7;
+    border: 1px solid white;
     text-decoration: none;
-    color: #000000;
+    color: white;
 }
 .about-btn:hover {
-    color: white;
-    background-color: #673AB7;
+    color: black;
+    background-color: white;
 }
 
-#skills h3 {
+#skills h3, #education h3, #contacts h3 {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
     font-family: "Open Sans", sans-serif;
-    margin: 50px 0 10px;
+    margin: 25px 0 10px;
 }
 .progress-card {
     margin-top: 40px;
@@ -258,16 +272,16 @@
     color: red;
 }
 
-#language {
+#language, #about, #mailme {
     color: white;
     background-color: #673AB7;
 }
 
-#language .hr {
+#language .hr, #about .hr, #mailme .hr {
     background-color: white;
 }
 
-#language p {
+#language p, #about p, #mailme p {
     color: white;
 }
 
@@ -289,6 +303,103 @@
     background: linear-gradient(to right, white 55%, gray 0%);
 }
 
+#experience h3 {
+    margin-top: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#experience img, #education img {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+
+}
+#experience h5, #education h5, #contacts h5 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin-top: 10px;
+}
+#experience h4, #education h4 {
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 30px;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+#education {
+    background-color: #673AB7;
+    color: white;
+}
+
+#education .hr {
+    background-color: white;
+}
+
+#education p {
+    color: white;
+}
+
+#education h3 {
+    color: white;
+
+}
+.contacts-div {
+    margin-bottom: 25px;
+}
+
+#contacts .icon {
+    text-align: left;
+}
+
+#contacts h5 {
+    margin-bottom: 8px;
+}
+
+.contacts-social {
+    display: flex;
+    margin-top: 15px;
+}
+
+#contacts {
+    padding-bottom: 0px;
+}
+
+#mailme form {
+    outline: 0 !important;
+}
+
+#mailme input[type="text"], #mailme textarea {
+    width: 88%;
+    box-shadow: none !important;
+    padding: 15px;
+    border: 1px solid #dfdfdf;
+    color: #a6a6a6;
+    resize: none;
+    font-size: 14px;
+    margin: 20px 0 0 ;
+    line-height: normal;
+    vertical-align: baseline;
+}
+
+#mailme input[type="submit"] {
+    border: 2px solid #673AB7;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    margin: 20px 0 0 ;
+}
+#mailme form {
+    margin-bottom: 30px;
+}
 @media (max-width: 425px) {
     .intro h1{
         font-size: 38px;
